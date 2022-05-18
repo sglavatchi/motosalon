@@ -1,4 +1,5 @@
 ﻿using Motosalon.Models;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Media;
 
@@ -55,7 +56,8 @@ namespace Motosalon
 
                 User user = new User(login, password, email);
                 Database.UserDataAccess.SaveUser(user);
-
+                //List<User> users = Database.UserDataAccess.LoadUsers();
+                
                 MessageBox.Show("Ви успішно зареєструвались)");
 
                 CustomerWindows window1 = new CustomerWindows();

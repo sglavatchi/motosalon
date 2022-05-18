@@ -1,4 +1,6 @@
-﻿using System.Windows;
+﻿using Motosalon.Models;
+using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Motosalon
@@ -21,6 +23,11 @@ namespace Motosalon
         private void Замовити_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Ви успішно замовили мотоцикл");
+
+            Moped moped = new Moped() { Brand = "Jawa", FuelType = "diesle", Model = "175c", Color = "blue" };
+
+            Database.MotoDataAccess.SaveMoto(moped);
+            List<MotorcycleBaseClass> motorcycleBaseClasses = Database.MotoDataAccess.LoadMoto();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

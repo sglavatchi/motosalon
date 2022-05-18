@@ -23,7 +23,7 @@ namespace Motosalon.Database
         {
             using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
             {
-                cnn.Execute("INSERT INTO MotoTable (brand,model,color,kindOfFuel,power) VALUES (@Brand, @Model, @FuelType, @Power)", motorcycle);
+                cnn.Execute("INSERT INTO MotoTable (brand,model,color,kindOfFuel,power) VALUES (@Brand, @Model, @Color, @FuelType, @Power)", motorcycle);
             }
         }
     }
