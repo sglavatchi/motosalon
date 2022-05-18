@@ -1,0 +1,34 @@
+﻿<Window x:Class="Motosalon.CustomerWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Motosalon"
+         mc:Ignorable="d"
+        Title="CustomerWind" Height="550" Width="900">
+    <Grid x:Name="CustomerWind" Background="MidnightBlue">
+        <Border MinWidth="850" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="550" CornerRadius="20">
+            <StackPanel>
+                <TextBlock Text="Панель користувача" FontSize="20" FontWeight="Bold" Margin="0 0 0 20" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                <TextBlock Text="Прайс-лист" FontSize="15" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Text="Марка" FontSize="15" FontWeight="Bold" HorizontalAlignment="left"/>
+                <ComboBox Name="Mark" Width="200" Margin="15" HorizontalAlignment="Left" SelectionChanged="Mark_SelectionChanged"/>
+                <TextBlock Text="Модель" FontSize="15" FontWeight="Bold" HorizontalAlignment="Left"/>
+                <ComboBox Name="Model" Width="200" Margin="15" HorizontalAlignment="Left"/>
+                <TextBlock Text="Колір" FontSize="15" FontWeight="Bold"/>
+                <ComboBox Name="Color" Width="200" Margin="15" HorizontalAlignment="Left"/>
+                <TextBlock Text="Потужність" FontSize="15" FontWeight="Bold"/>
+                <ComboBox Name="Power" Width="200" Margin="15" HorizontalAlignment="Left"/>
+
+
+                <Button x:Name="Замовити" Content="Замовити" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontWeight="Bold" Click="Замовити_Click" />
+
+                <Button Content="Вихід" Margin="0" Width="50" HorizontalAlignment="Center" FontWeight="Bold" Click="Button_Click"/>
+
+
+                <ListView x:Name="listofMoto" Margin="10"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>

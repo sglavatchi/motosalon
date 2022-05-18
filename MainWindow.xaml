@@ -1,0 +1,32 @@
+﻿<Window x:Class="Motosalon.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Motosalon"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Outlaws" Height="600" Width="800">
+    <Grid x:Name="MainWind" Background="MidnightBlue">
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="550" CornerRadius="20">
+            <StackPanel>
+                <TextBlock Text="Вас вітає мотосалон Outlaws" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Content="Вхід" FontSize="20" FontWeight="Bold" Height="31" VerticalAlignment="Bottom" Click="Button_Window_Click" />
+                    <Button HorizontalAlignment="Right" Content="Реєстрація" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+
+                </Grid>
+                <TextBlock Text="Логін" FontWeight="Bold"/>
+                <TextBox x:Name="textBoxlogin" Width="200"/>
+                <TextBlock Text="Пароль" FontWeight="Bold"/>
+                <PasswordBox x:Name="passBox" Width="200"/>
+                <TextBlock Text="Підтвердження паролю" FontWeight="Bold"/>
+                <PasswordBox x:Name="passBox2" Width="200"/>
+                <TextBlock Text="Електронна пошта" FontWeight="Bold"/>
+                <TextBox x:Name="textBoxEmail" Width="200"/>
+                <Button Content="Режим адміністратора" HorizontalAlignment="Right" FontWeight="Bold" Width="139" Click="Button_Click_1" />
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</Window>
